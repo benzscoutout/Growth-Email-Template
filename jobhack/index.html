@@ -255,98 +255,157 @@
 
             <div class="d-block">
                 <p class="text-header-white">
-                    สวัสดี คุณ ณัชชา! <br>
-                    เราได้ส่งงานที่อาจจะตรงกับความสนใจของคุณ โดยอ้างอิงจากประสบการณ์ทำงาน<br>
-                    และประสบการณ์การศึกษาของคุณ
+                    สวัสดี คุณ {{Attributes.FirstName}} {{Attributes.LastName}}<br><br>
+                    เราได้ส่งงานที่อาจจะตรงกับความสนใจของคุณ โดยอ้างอิงจากประสบการณ์ทำงาน และประสบการณ์การศึกษาของคุณ
                 </p>
             </div>
         </div>
         <div class="card-control">
-            <div class="card-border">
-                <a href="" target="_blank">
+            <div class="card-border" style="display: {{Event.attributes.RowStyle1}};">
+                <a href="{{Event.attributes.Link1}}?utm_source=oneprofile_email&utm_medium=job_recommend" target="_blank">
                     <table style="width: 100%;">
                         <tr>
                             <td colspan="7" class="td-non-line-card">
-                                <p class="card-title">Web Design / Graphic Designer</p>
-                                <p class="card-sub-title">Stark Industries </p>
+                                <p class="card-title">{{Event.attributes.JobTitle1}}</p>
+                                <p class="card-sub-title">{{Event.attributes.JobHeadquarter1}}</p>
                                 <div class="d-flex desc-control">
                                     <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ftemplate-img-email%403x.png?alt=media"
                                         class="card-img-icon">
-                                    <span class="card-desc">Design and technology</span>
+                                    <span class="card-desc">{{Event.attributes.JobRoleType1}}</span>
                                 </div>
                                 <div class="d-flex desc-control">
                                     <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ftemplate-img-location%403x.png?alt=media"
                                         class="card-img-icon">
-                                    <span class="card-desc">วัฒนา กรุงเทพมหานคร</span>
+                                    <span class="card-desc">{{Event.attributes.JobBranch1}}</span>
                                 </div>
                                 <div class="d-flex desc-control">
                                     <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ftemplate-img-salary%403x.png?alt=media"
                                         class="card-img-icon">
-                                    <span class="card-desc">20,000 - 30,000 บาท/เดือน</span>
+                                    <span class="card-desc">{{Event.attributes.Salary1}}</span>
                                 </div>
                             </td>
                             <td colspan="5" class="td-non-line-card">
-                                <img src="" class="img-logo-company">
+                                <img src="{{Event.attributes.CompanyLogo1}}" class="img-logo-company">
                             </td>
                         </tr>
                     </table>
                 </a>
             </div>
-            <div class="card-border">
-                <a href="" target="_blank">
+            <div class="card-border" style="display: {{Event.attributes.RowStyle2}};">
+                <a href="{{Event.attributes.Link2}}?utm_source=oneprofile_email&utm_medium=job_recommend" target="_blank">
                     <table style="width: 100%;">
                         <tr>
                             <td colspan="7" class="td-non-line-card">
-                                <p class="card-title">Web Design / Graphic Designer</p>
-                                <p class="card-sub-title">Stark Industries </p>
+                                <p class="card-title">{{Event.attributes.JobTitle2}}</p>
+                                <p class="card-sub-title">{{Event.attributes.JobHeadquarter2}}</p>
                                 <div class="d-flex desc-control">
                                     <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ftemplate-img-email%403x.png?alt=media"
                                         class="card-img-icon">
-                                    <span class="card-desc">Design and technology</span>
+                                    <span class="card-desc">{{Event.attributes.JobRoleType2}}</span>
                                 </div>
                                 <div class="d-flex desc-control">
                                     <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ftemplate-img-location%403x.png?alt=media"
                                         class="card-img-icon">
-                                    <span class="card-desc">วัฒนา กรุงเทพมหานคร</span>
+                                    <span class="card-desc">{{Event.attributes.JobBranch2}}</span>
                                 </div>
                                 <div class="d-flex desc-control">
                                     <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ftemplate-img-salary%403x.png?alt=media"
                                         class="card-img-icon">
-                                    <span class="card-desc">20,000 - 30,000 บาท/เดือน</span>
+                                    <span class="card-desc">{{Event.attributes.Salary2}}</span>
                                 </div>
                             </td>
                             <td colspan="5" class="td-non-line-card">
-                                <img src="" class="img-logo-company">
+                                <img src="{{Event.attributes.CompanyLogo2}}" class="img-logo-company">
                             </td>
                         </tr>
                     </table>
                 </a>
             </div>
-            <div class="card-border">
-                <a href="" target="_blank">
+            <div class="card-border" style="display: {{Event.attributes.RowStyle3}};">
+                <a href="{{Event.attributes.Link3}}?utm_source=oneprofile_email&utm_medium=job_recommend" target="_blank">
                     <table style="width: 100%;">
                         <tr>
                             <td colspan="7" class="td-non-line-card">
-                                <p class="card-title">Web Design / Graphic Designer</p>
-                                <p class="card-sub-title">Stark Industries </p>
+                                <p class="card-title">{{Event.attributes.JobTitle3}}</p>
+                                <p class="card-sub-title">{{Event.attributes.JobHeadquarter3}}</p>
                                 <div class="d-flex desc-control">
                                     <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ftemplate-img-email%403x.png?alt=media"
                                         class="card-img-icon">
-                                    <span class="card-desc">Design and technology</span>
+                                    <span class="card-desc">{{Event.attributes.JobRoleType3}}</span>
                                 </div>
                                 <div class="d-flex desc-control">
                                     <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ftemplate-img-location%403x.png?alt=media"
                                         class="card-img-icon">
-                                    <span class="card-desc">วัฒนา กรุงเทพมหานคร</span>
+                                    <span class="card-desc">{{Event.attributes.JobBranch3}}</span>
                                 </div>
                                 <div class="d-flex desc-control">
                                     <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ftemplate-img-salary%403x.png?alt=media"
                                         class="card-img-icon">
-                                    <span class="card-desc">20,000 - 30,000 บาท/เดือน</span>
+                                    <span class="card-desc">{{Event.attributes.Salary3}}</span>
                                 </div>
                             </td>
                             <td colspan="5" class="td-non-line-card">
-                                <img src="" class="img-logo-company">
+                                <img src="{{Event.attributes.CompanyLogo3}}" class="img-logo-company">
+                            </td>
+                        </tr>
+                    </table>
+                </a>
+            </div>
+            <div class="card-border" style="display: {{Event.attributes.RowStyle4}};">
+                <a href="{{Event.attributes.Link4}}?utm_source=oneprofile_email&utm_medium=job_recommend" target="_blank">
+                    <table style="width: 100%;">
+                        <tr>
+                            <td colspan="7" class="td-non-line-card">
+                                <p class="card-title">{{Event.attributes.JobTitle4}}</p>
+                                <p class="card-sub-title">{{Event.attributes.JobHeadquarter4}}</p>
+                                <div class="d-flex desc-control">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ftemplate-img-email%403x.png?alt=media"
+                                        class="card-img-icon">
+                                    <span class="card-desc">{{Event.attributes.JobRoleType4}}</span>
+                                </div>
+                                <div class="d-flex desc-control">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ftemplate-img-location%403x.png?alt=media"
+                                        class="card-img-icon">
+                                    <span class="card-desc">{{Event.attributes.JobBranch4}}</span>
+                                </div>
+                                <div class="d-flex desc-control">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ftemplate-img-salary%403x.png?alt=media"
+                                        class="card-img-icon">
+                                    <span class="card-desc">{{Event.attributes.Salary4}}</span>
+                                </div>
+                            </td>
+                            <td colspan="5" class="td-non-line-card">
+                                <img src="{{Event.attributes.CompanyLogo4}}" class="img-logo-company">
+                            </td>
+                        </tr>
+                    </table>
+                </a>
+            </div>
+            <div class="card-border" style="display: {{Event.attributes.RowStyle5}};">
+                <a href="{{Event.attributes.Link5}}?utm_source=oneprofile_email&utm_medium=job_recommend" target="_blank">
+                    <table style="width: 100%;">
+                        <tr>
+                            <td colspan="7" class="td-non-line-card">
+                                <p class="card-title">{{Event.attributes.JobTitle5}}</p>
+                                <p class="card-sub-title">{{Event.attributes.JobHeadquarter5}}</p>
+                                <div class="d-flex desc-control">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ftemplate-img-email%403x.png?alt=media"
+                                        class="card-img-icon">
+                                    <span class="card-desc">{{Event.attributes.JobRoleType5}}</span>
+                                </div>
+                                <div class="d-flex desc-control">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ftemplate-img-location%403x.png?alt=media"
+                                        class="card-img-icon">
+                                    <span class="card-desc">{{Event.attributes.JobBranch5}}</span>
+                                </div>
+                                <div class="d-flex desc-control">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ftemplate-img-salary%403x.png?alt=media"
+                                        class="card-img-icon">
+                                    <span class="card-desc">{{Event.attributes.Salary5}}</span>
+                                </div>
+                            </td>
+                            <td colspan="5" class="td-non-line-card">
+                                <img src="{{Event.attributes.CompanyLogo5}}" class="img-logo-company">
                             </td>
                         </tr>
                     </table>
@@ -357,7 +416,7 @@
 
         <p class="text-footer">ยังไม่พบงานที่ต้องการคุณต้องการ? ลองดูงานทั้งหมดได้เลย</p>
         <div class="button-control">
-            <a class="button-footer">
+            <a href="https://app.jobhack.co/?utm_source=oneprofile_email&utm_medium=all_jobs_button" class="button-footer">
                 ดูงานทั้งหมด >
             </a>
         </div>
@@ -369,7 +428,7 @@
                         href="https://scoutout.co/%e0%b9%80%e0%b8%81%e0%b8%b5%e0%b9%88%e0%b8%a2%e0%b8%a7%e0%b8%81%e0%b8%b1%e0%b8%9a%e0%b9%80%e0%b8%a3%e0%b8%b2/">เกี่ยวกับบริษัท</a>
                 </td>
                 <td class="text-under-footer"><a href="mailto:customerservice@scoutout.net">ติดต่อเรา</a></td>
-                <td class="text-under-footer"><a href="">Unsubscribe</a></td>
+                <td class="text-under-footer"><a href="https://app.careercraft.co/me/edit">Unsubscribe</a></td>
                 <td class="text-under-footer"><a
                         href="https://scoutout.co/th/terms-th/">ข้อกำหนดและเงื่อนไขการใช้บริการ</a></td>
                 <td class="text-under-footer"><a href="https://scoutout.co/th/privacy-th/">นโยบายตวามเป็นส่วนตัว</a>
