@@ -12,65 +12,140 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style>
-        :root {
-            --bluedark: #3d4e6f;
-            --black: #333333;
-            --browngrey: #888888;
-            --softgrey: #aaaaaa;
-        }
+  
+    </style>
+</head>
 
-        @font-face {
-            font-family: 'Noto Regular';
-            src: url('assets/NotoSans-Regular.ttf') format('truetype');
-        }
+<body style="background-color: #f5f7f8;">
+    <div style="position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    height: auto;
+    background-color: white;">
 
-        .container-control {
-            position: relative;
+        <div style=" padding: 16px;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        margin-top: 80px;
+        background-color: #3d4e6f;
+        min-height: 200px;">
+            <table style="width: 600px; margin-left: auto;
+            margin-top: 8px;
+            margin-right: auto;">
+                <tr>
+                    <td colspan="6" style="border-right: none; margin-top: 8px;
+                    height: 25px;
+                    padding: 0 8px;"> <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Fscoutout-white-img%403x.png?alt=media" style=" width: 200px;
+                            height: 71px;
+                            object-fit: contain;"></td>
+                    <td colspan="6" style="border-right: none; margin-top: 8px;
+                    height: 25px;
+                    padding: 0 8px;"> <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Femail-template-img-1%403x.png?alt=media" style="margin-left: 100px;
+                            width: 182px;
+                            margin-top: -60px;
+                            height: 95px;
+                            object-fit: contain;"></td>
+                </tr>
+            </table>
+
+
+            <div class="d-block">
+                <p style=" padding-left: 16px;
+                padding-right: 16px;
+                margin-top: 50px;
+                font-size: 16px;
+                color: white;">
+                    สวัสดี คุณ {{Attributes.FirstName}} {{Attributes.LastName}}<br><br>
+                    เราได้คัดสรรงานที่น่าสนใจและเหมาะกับคุณมาแนะนำ ซึ่งเป็นงานที่อ้างอิงจาก<br>ข้อมูลการศึกษาและประสบการณ์การทำงานของคุณบน ONE Profile
+                </p>
+            </div>
+        </div>
+        <div style="padding-top: 32px;
+        padding-bottom: 32px;
+        background-color: white;">
+            <div style="width: 532px;
+            min-height: 146px;
+            margin-top: 16px;
             margin-left: auto;
             margin-right: auto;
-            width: 600px;
-            height: auto;
-            background-color: white;
-        }
-
-        .top-control {
-            padding: 16px;
-            border-top-left-radius: 8px;
-            border-top-right-radius: 8px;
-            margin-top: 80px;
-            background-color: #3d4e6f;
-            min-height: 200px;
-        }
-
-        .img-top {
-            margin-left: 100px;
-            width: 182px;
-            margin-top: -60px;
-            height: 95px;
-            object-fit: contain;
-        }
-
-        .img-scoutout {
-            width: 200px;
-            height: 71px;
-            object-fit: contain;
-        }
-
-        .text-header-white {
-            padding-left: 16px;
-            padding-right: 16px;
-            margin-top: 50px;
-            font-size: 16px;
-            color: white;
-        }
-
-        .card-control {
-            padding-top: 32px;
-            padding-bottom: 32px;
-            background-color: white;
-        }
-
-        .card-border {
+            border-radius: 4px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: #4a90e2;
+            background-color: #ffffff;
+            display: {{Event.attributes.RowStyle1}};">
+                <a href="{{Event.attributes.Link1}}?utm_source=oneprofile_email&utm_medium=job_recommend" target="_blank" style="text-decoration: none !important;">
+                    <table style="width: 100%;  margin-left: auto;
+                    margin-top: 8px;
+                    margin-right: auto;">
+                        <tr>
+                            <td colspan="7" style=" padding: 4px 16px;
+            border-right: none;">
+                                <p style=" width: 350px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none !important;
+            color: #333333;">{{Event.attributes.JobTitle1}}</p>
+                                <p style="width: 350px;
+                                font-size: 16px;
+                                font-weight: 500px;
+                                text-decoration: none !important;
+                                color: #333333;">{{Event.attributes.JobHeadquarter1}}</p>
+                                <div class="d-flex desc-control">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ftemplate-img-email%403x.png?alt=media" style=" width: 14px;
+            height: 14px;
+            object-fit: contain;">
+                                    <span style="margin-top: auto;
+                                    margin-bottom: auto;
+                                    margin-left: 8px;
+                                    font-size: 14px;
+                                    text-decoration: none !important;
+                                    font-weight: 400;
+                                    color: #888888;">{{Event.attributes.JobRoleType1}}</span>
+                                </div>
+                                <div class="d-flex desc-control">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ftemplate-img-location%403x.png?alt=media" style=" width: 14px;
+            height: 14px;
+            object-fit: contain;">
+                                    <span style="margin-top: auto;
+                                    margin-bottom: auto;
+                                    margin-left: 8px;
+                                    font-size: 14px;
+                                    text-decoration: none !important;
+                                    font-weight: 400;
+                                    color: #888888;">{{Event.attributes.JobBranch1}}</span>
+                                </div>
+                                <div class="d-flex desc-control">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ftemplate-img-salary%403x.png?alt=media" style=" width: 14px;
+            height: 14px;
+            object-fit: contain;">
+                                    <span style="margin-top: auto;
+                                    margin-bottom: auto;
+                                    margin-left: 8px;
+                                    font-size: 14px;
+                                    text-decoration: none !important;
+                                    font-weight: 400;
+                                    color: #888888;">{{Event.attributes.Salary1}}</span>
+                                </div>
+                            </td>
+                            <td colspan="5" style=" padding: 4px 16px;
+            border-right: none;">
+                                <img src="{{Event.attributes.CompanyLogo1}}" style=" width: 120px;
+                                height: 101px;
+                                object-fit: contain;
+                                top: 0;
+                                padding-right: 16px;
+                                bottom: 0;
+                                margin-top: auto;
+                                margin-bottom: auto;
+                                right: 30px;">
+                            </td>
+                        </tr>
+                    </table>
+                </a>
+            </div>
+            <div style="
             width: 532px;
             min-height: 146px;
             margin-top: 16px;
@@ -81,78 +156,331 @@
             border-style: solid;
             border-color: #4a90e2;
             background-color: #ffffff;
-        }
-
-        .img-logo-company {
-            width: 120px;
-            height: 101px;
-            object-fit: contain;
-            top: 0;
-            padding-right: 16px;
-            bottom: 0;
-            margin-top: auto;
-            margin-bottom: auto;
-            right: 30px;
-        }
-
-        .card-title {
-            width: 350px;
+            display: {{Event.attributes.RowStyle2}};">
+                <a href="{{Event.attributes.Link2}}?utm_source=oneprofile_email&utm_medium=job_recommend" target="_blank" style="text-decoration: none !important;">
+                    <table style="width: 100%;  margin-left: auto;
+                    margin-top: 8px;
+                    margin-right: auto;">
+                        <tr>
+                            <td colspan="7" style=" padding: 4px 16px;
+            border-right: none;">
+                                <p style=" width: 350px;
             font-size: 18px;
             font-weight: bold;
             text-decoration: none !important;
-            color: #333333;
-        }
-
-        .card-sub-title {
-            width: 350px;
-            font-size: 16px;
-            font-weight: 500px;
-            text-decoration: none !important;
-            color: #333333;
-        }
-
-        .desc-control {
-            width: 350px;
-            margin-top: 8px;
-            margin-bottom: 8px;
-        }
-
-        .card-img-icon {
-            width: 14px;
+            color: #333333;">{{Event.attributes.JobTitle2}}</p>
+                                <p style="width: 350px;
+                                font-size: 16px;
+                                font-weight: 500px;
+                                text-decoration: none !important;
+                                color: #333333;">{{Event.attributes.JobHeadquarter2}}</p>
+                                <div class="d-flex desc-control">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ftemplate-img-email%403x.png?alt=media" style=" width: 14px;
             height: 14px;
-            object-fit: contain;
-        }
-
-        .card-desc {
-            margin-top: auto;
-            margin-bottom: auto;
-            margin-left: 8px;
-            font-size: 14px;
-            text-decoration: none !important;
-            font-weight: 400;
-            color: #888888;
-        }
-
-        p {
-            margin-bottom: 0px;
-            padding-bottom: 0px;
-        }
-
-        .text-footer {
-            font-size: 16px;
-            color: #3d4e6f;
-            text-decoration: none !important;
-            font-weight: bold;
+            object-fit: contain;">
+                                    <span style="margin-top: auto;
+                                    margin-bottom: auto;
+                                    margin-left: 8px;
+                                    font-size: 14px;
+                                    text-decoration: none !important;
+                                    font-weight: 400;
+                                    color: #888888;">{{Event.attributes.JobRoleType2}}</span>
+                                </div>
+                                <div class="d-flex desc-control">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ftemplate-img-location%403x.png?alt=media" style=" width: 14px;
+            height: 14px;
+            object-fit: contain;">
+                                    <span style="margin-top: auto;
+                                    margin-bottom: auto;
+                                    margin-left: 8px;
+                                    font-size: 14px;
+                                    text-decoration: none !important;
+                                    font-weight: 400;
+                                    color: #888888;">{{Event.attributes.JobBranch2}}</span>
+                                </div>
+                                <div class="d-flex desc-control">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ftemplate-img-salary%403x.png?alt=media" style=" width: 14px;
+            height: 14px;
+            object-fit: contain;">
+                                    <span style="margin-top: auto;
+                                    margin-bottom: auto;
+                                    margin-left: 8px;
+                                    font-size: 14px;
+                                    text-decoration: none !important;
+                                    font-weight: 400;
+                                    color: #888888;">{{Event.attributes.Salary2}}</span>
+                                </div>
+                            </td>
+                            <td colspan="5" style=" padding: 4px 16px;
+            border-right: none;">
+                                <img src="{{Event.attributes.CompanyLogo2}}" style=" width: 120px;
+                                height: 101px;
+                                object-fit: contain;
+                                top: 0;
+                                padding-right: 16px;
+                                bottom: 0;
+                                margin-top: auto;
+                                margin-bottom: auto;
+                                right: 30px;">
+                            </td>
+                        </tr>
+                    </table>
+                </a>
+            </div>
+            <div style="width: 532px;
+            min-height: 146px;
             margin-top: 16px;
-            text-align: center;
-        }
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 4px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: #4a90e2;
+            background-color: #ffffff;
+            display: {{Event.attributes.RowStyle3}};">
+                <a href="{{Event.attributes.Link3}}?utm_source=oneprofile_email&utm_medium=job_recommend" target="_blank" style="text-decoration: none !important;">
+                    <table style="width: 100%;  margin-left: auto;
+                    margin-top: 8px;
+                    margin-right: auto;">
+                        <tr>
+                            <td colspan="7" style=" padding: 4px 16px;
+            border-right: none;">
+                                <p style=" width: 350px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none !important;
+            color: #333333;">{{Event.attributes.JobTitle3}}</p>
+                                <p style="width: 350px;
+                                font-size: 16px;
+                                font-weight: 500px;
+                                text-decoration: none !important;
+                                color: #333333;">{{Event.attributes.JobHeadquarter3}}</p>
+                                <div class="d-flex desc-control">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ftemplate-img-email%403x.png?alt=media" style=" width: 14px;
+            height: 14px;
+            object-fit: contain;">
+                                    <span style="margin-top: auto;
+                                    margin-bottom: auto;
+                                    margin-left: 8px;
+                                    font-size: 14px;
+                                    text-decoration: none !important;
+                                    font-weight: 400;
+                                    color: #888888;">{{Event.attributes.JobRoleType3}}</span>
+                                </div>
+                                <div class="d-flex desc-control">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ftemplate-img-location%403x.png?alt=media" style=" width: 14px;
+            height: 14px;
+            object-fit: contain;">
+                                    <span style="margin-top: auto;
+                                    margin-bottom: auto;
+                                    margin-left: 8px;
+                                    font-size: 14px;
+                                    text-decoration: none !important;
+                                    font-weight: 400;
+                                    color: #888888;">{{Event.attributes.JobBranch3}}</span>
+                                </div>
+                                <div class="d-flex desc-control">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ftemplate-img-salary%403x.png?alt=media" style=" width: 14px;
+            height: 14px;
+            object-fit: contain;">
+                                    <span style="margin-top: auto;
+                                    margin-bottom: auto;
+                                    margin-left: 8px;
+                                    font-size: 14px;
+                                    text-decoration: none !important;
+                                    font-weight: 400;
+                                    color: #888888;">{{Event.attributes.Salary3}}</span>
+                                </div>
+                            </td>
+                            <td colspan="5" style=" padding: 4px 16px;
+            border-right: none;">
+                                <img src="{{Event.attributes.CompanyLogo3}}" style=" width: 120px;
+                                height: 101px;
+                                object-fit: contain;
+                                top: 0;
+                                padding-right: 16px;
+                                bottom: 0;
+                                margin-top: auto;
+                                margin-bottom: auto;
+                                right: 30px;">
+                            </td>
+                        </tr>
+                    </table>
+                </a>
+            </div>
+            <div style="width: 532px;
+            min-height: 146px;
+            margin-top: 16px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 4px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: #4a90e2;
+            background-color: #ffffff;
+            display: {{Event.attributes.RowStyle4}};">
+                <a href="{{Event.attributes.Link4}}?utm_source=oneprofile_email&utm_medium=job_recommend" target="_blank" style="text-decoration: none !important;">
+                    <table style="width: 100%;  margin-left: auto;
+                    margin-top: 8px;
+                    margin-right: auto;">
+                        <tr>
+                            <td colspan="7" style=" padding: 4px 16px;
+            border-right: none;">
+                                <p style=" width: 350px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none !important;
+            color: #333333;">{{Event.attributes.JobTitle4}}</p>
+                                <p style="width: 350px;
+                                font-size: 16px;
+                                font-weight: 500px;
+                                text-decoration: none !important;
+                                color: #333333;">{{Event.attributes.JobHeadquarter4}}</p>
+                                <div class="d-flex desc-control">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ftemplate-img-email%403x.png?alt=media" style=" width: 14px;
+            height: 14px;
+            object-fit: contain;">
+                                    <span style="margin-top: auto;
+                                    margin-bottom: auto;
+                                    margin-left: 8px;
+                                    font-size: 14px;
+                                    text-decoration: none !important;
+                                    font-weight: 400;
+                                    color: #888888;">{{Event.attributes.JobRoleType4}}</span>
+                                </div>
+                                <div class="d-flex desc-control">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ftemplate-img-location%403x.png?alt=media" style=" width: 14px;
+            height: 14px;
+            object-fit: contain;">
+                                    <span style="margin-top: auto;
+                                    margin-bottom: auto;
+                                    margin-left: 8px;
+                                    font-size: 14px;
+                                    text-decoration: none !important;
+                                    font-weight: 400;
+                                    color: #888888;">{{Event.attributes.JobBranch4}}</span>
+                                </div>
+                                <div class="d-flex desc-control">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ftemplate-img-salary%403x.png?alt=media" style=" width: 14px;
+            height: 14px;
+            object-fit: contain;">
+                                    <span style="margin-top: auto;
+                                    margin-bottom: auto;
+                                    margin-left: 8px;
+                                    font-size: 14px;
+                                    text-decoration: none !important;
+                                    font-weight: 400;
+                                    color: #888888;">{{Event.attributes.Salary4}}</span>
+                                </div>
+                            </td>
+                            <td colspan="5" style=" padding: 4px 16px;
+            border-right: none;">
+                                <img src="{{Event.attributes.CompanyLogo4}}" style=" width: 120px;
+                                height: 101px;
+                                object-fit: contain;
+                                top: 0;
+                                padding-right: 16px;
+                                bottom: 0;
+                                margin-top: auto;
+                                margin-bottom: auto;
+                                right: 30px;">
+                            </td>
+                        </tr>
+                    </table>
+                </a>
+            </div>
+            <div style="width: 532px;
+            min-height: 146px;
+            margin-top: 16px;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 4px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: #4a90e2;
+            background-color: #ffffff;
+            display: {{Event.attributes.RowStyle5}};">
+                <a href="{{Event.attributes.Link5}}?utm_source=oneprofile_email&utm_medium=job_recommend" target="_blank" style="text-decoration: none !important;">
+                    <table style="width: 100%;  margin-left: auto;
+                    margin-top: 8px;
+                    margin-right: auto;">
+                        <tr>
+                            <td colspan="7" style=" padding: 4px 16px;
+            border-right: none;">
+                                <p style=" width: 350px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none !important;
+            color: #333333;">{{Event.attributes.JobTitle5}}</p>
+                                <p style="width: 350px;
+                                font-size: 16px;
+                                font-weight: 500px;
+                                text-decoration: none !important;
+                                color: #333333;">{{Event.attributes.JobHeadquarter5}}</p>
+                                <div class="d-flex desc-control">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ftemplate-img-email%403x.png?alt=media" style=" width: 14px;
+            height: 14px;
+            object-fit: contain;">
+                                    <span style="margin-top: auto;
+                                    margin-bottom: auto;
+                                    margin-left: 8px;
+                                    font-size: 14px;
+                                    text-decoration: none !important;
+                                    font-weight: 400;
+                                    color: #888888;">{{Event.attributes.JobRoleType5}}</span>
+                                </div>
+                                <div class="d-flex desc-control">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ftemplate-img-location%403x.png?alt=media" style=" width: 14px;
+            height: 14px;
+            object-fit: contain;">
+                                    <span style="margin-top: auto;
+                                    margin-bottom: auto;
+                                    margin-left: 8px;
+                                    font-size: 14px;
+                                    text-decoration: none !important;
+                                    font-weight: 400;
+                                    color: #888888;">{{Event.attributes.JobBranch5}}</span>
+                                </div>
+                                <div class="d-flex desc-control">
+                                    <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ftemplate-img-salary%403x.png?alt=media" style=" width: 14px;
+            height: 14px;
+            object-fit: contain;">
+                                    <span style="margin-top: auto;
+                                    margin-bottom: auto;
+                                    margin-left: 8px;
+                                    font-size: 14px;
+                                    text-decoration: none !important;
+                                    font-weight: 400;
+                                    color: #888888;">{{Event.attributes.Salary5}}</span>
+                                </div>
+                            </td>
+                            <td colspan="5" style=" padding: 4px 16px;
+            border-right: none;">
+                                <img src="{{Event.attributes.CompanyLogo5}}" style=" width: 120px;
+                                height: 101px;
+                                object-fit: contain;
+                                top: 0;
+                                padding-right: 16px;
+                                bottom: 0;
+                                margin-top: auto;
+                                margin-bottom: auto;
+                                right: 30px;">
+                            </td>
+                        </tr>
+                    </table>
+                </a>
+            </div>
+        </div>
 
-        .button-control {
-            display: flex;
-        }
 
-        .button-footer {
-            cursor: pointer;
+        <p style=" font-size: 16px;
+        color: #3d4e6f;
+        text-decoration: none !important;
+        font-weight: bold;
+        margin-top: 16px;
+        text-align: center;">ยังไม่พบงานที่ต้องการคุณต้องการ? ลองดูงานทั้งหมดได้เลย</p>
+        <div style=" display: flex;">
+            <a href="https://app.jobhack.co/?utm_source=oneprofile_email&utm_medium=all_jobs_button" style="cursor: pointer;
             margin-top: 30px !important;
             width: 200px;
             height: auto;
@@ -164,331 +492,106 @@
             text-align: center;
             padding: 8px 22px 9px 22px;
             border-radius: 8px;
-            background-color: #3d4e6f;
-        }
-
-        .line-footer {
-            margin-left: auto;
-            margin-right: auto;
-            width: 544px;
-            margin-top: 40px;
-            height: 1px;
-            border: solid 1px #aaaaaa;
-        }
-
-        a:hover {
-            color: white;
-            text-decoration: none;
-        }
-
-        body {
-            font-family: Prompt, sans-serif;
-            background-color: #f4f4f4;
-        }
-
-        .text-under-footer {
-            font-size: 8px;
-            color: #aaaaaa
-        }
-
-        .text-under-footer>a {
-            font-size: 10px;
-            color: #aaaaaa
-        }
-
-        td {
-            margin-top: 8px;
-            height: 25px;
-            border-right: solid 1px #aaaaaa;
-            padding: 0 8px;
-        }
-
-        .text-end {
-            text-align: center;
-            font-size: 10px;
-            color: #aaaaaa;
-        }
-
-        tr.spaceUnder>td {
-            margin-bottom: 1em;
-        }
-
-        table {
-            margin-left: auto;
-            margin-top: 8px;
-            margin-right: auto;
-        }
-
-        td:last-child {
-            border-right: none;
-        }
-
-        .td-non-line {
-            border-right: none;
-        }
-
-        .td-non-line-card {
-            padding: 4px 16px;
-            border-right: none;
-        }
-
-        .icon-end {
-            width: 23px;
-            height: 23px;
-            object-fit: contain;
-            margin-left: 2px;
-            margin-right: 2px;
-        }
-    </style>
-</head>
-
-<body style="background-color: #f5f7f8;">
-    <div class="container-control">
-
-        <div class="top-control">
-            <table style="width: 600px;">
-                <tr>
-                    <td colspan="6" class="td-non-line"> <img
-                            src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Fscoutout-white-img%403x.png?alt=media"
-                            class="img-scoutout"></td>
-                    <td colspan="6" class="td-non-line"> <img
-                            src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Femail-template-img-1%403x.png?alt=media"
-                            class="img-top"></td>
-                </tr>
-            </table>
-
-
-            <div class="d-block">
-                <p class="text-header-white">
-                    สวัสดี คุณ {{Attributes.FirstName}} {{Attributes.LastName}}<br><br>
-                    เราได้คัดสรรงานที่น่าสนใจและเหมาะกับคุณมาแนะนำ ซึ่งเป็นงานที่อ้างอิงจาก<br>ข้อมูลการศึกษาและประสบการณ์การทำงานของคุณบน ONE Profile
-                </p>
-            </div>
-        </div>
-        <div class="card-control">
-            <div class="card-border" style="display: {{Event.attributes.RowStyle1}};">
-                <a href="{{Event.attributes.Link1}}?utm_source=oneprofile_email&utm_medium=job_recommend" target="_blank" style="text-decoration: none !important;">
-                    <table style="width: 100%;">
-                        <tr>
-                            <td colspan="7" class="td-non-line-card">
-                                <p class="card-title">{{Event.attributes.JobTitle1}}</p>
-                                <p class="card-sub-title">{{Event.attributes.JobHeadquarter1}}</p>
-                                <div class="d-flex desc-control">
-                                    <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ftemplate-img-email%403x.png?alt=media"
-                                        class="card-img-icon">
-                                    <span class="card-desc">{{Event.attributes.JobRoleType1}}</span>
-                                </div>
-                                <div class="d-flex desc-control">
-                                    <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ftemplate-img-location%403x.png?alt=media"
-                                        class="card-img-icon">
-                                    <span class="card-desc">{{Event.attributes.JobBranch1}}</span>
-                                </div>
-                                <div class="d-flex desc-control">
-                                    <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ftemplate-img-salary%403x.png?alt=media"
-                                        class="card-img-icon">
-                                    <span class="card-desc">{{Event.attributes.Salary1}}</span>
-                                </div>
-                            </td>
-                            <td colspan="5" class="td-non-line-card">
-                                <img src="{{Event.attributes.CompanyLogo1}}" class="img-logo-company">
-                            </td>
-                        </tr>
-                    </table>
-                </a>
-            </div>
-            <div class="card-border" style="display: {{Event.attributes.RowStyle2}};">
-                <a href="{{Event.attributes.Link2}}?utm_source=oneprofile_email&utm_medium=job_recommend" target="_blank" style="text-decoration: none !important;">
-                    <table style="width: 100%;">
-                        <tr>
-                            <td colspan="7" class="td-non-line-card">
-                                <p class="card-title">{{Event.attributes.JobTitle2}}</p>
-                                <p class="card-sub-title">{{Event.attributes.JobHeadquarter2}}</p>
-                                <div class="d-flex desc-control">
-                                    <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ftemplate-img-email%403x.png?alt=media"
-                                        class="card-img-icon">
-                                    <span class="card-desc">{{Event.attributes.JobRoleType2}}</span>
-                                </div>
-                                <div class="d-flex desc-control">
-                                    <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ftemplate-img-location%403x.png?alt=media"
-                                        class="card-img-icon">
-                                    <span class="card-desc">{{Event.attributes.JobBranch2}}</span>
-                                </div>
-                                <div class="d-flex desc-control">
-                                    <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ftemplate-img-salary%403x.png?alt=media"
-                                        class="card-img-icon">
-                                    <span class="card-desc">{{Event.attributes.Salary2}}</span>
-                                </div>
-                            </td>
-                            <td colspan="5" class="td-non-line-card">
-                                <img src="{{Event.attributes.CompanyLogo2}}" class="img-logo-company">
-                            </td>
-                        </tr>
-                    </table>
-                </a>
-            </div>
-            <div class="card-border" style="display: {{Event.attributes.RowStyle3}};">
-                <a href="{{Event.attributes.Link3}}?utm_source=oneprofile_email&utm_medium=job_recommend" target="_blank" style="text-decoration: none !important;">
-                    <table style="width: 100%;">
-                        <tr>
-                            <td colspan="7" class="td-non-line-card">
-                                <p class="card-title">{{Event.attributes.JobTitle3}}</p>
-                                <p class="card-sub-title">{{Event.attributes.JobHeadquarter3}}</p>
-                                <div class="d-flex desc-control">
-                                    <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ftemplate-img-email%403x.png?alt=media"
-                                        class="card-img-icon">
-                                    <span class="card-desc">{{Event.attributes.JobRoleType3}}</span>
-                                </div>
-                                <div class="d-flex desc-control">
-                                    <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ftemplate-img-location%403x.png?alt=media"
-                                        class="card-img-icon">
-                                    <span class="card-desc">{{Event.attributes.JobBranch3}}</span>
-                                </div>
-                                <div class="d-flex desc-control">
-                                    <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ftemplate-img-salary%403x.png?alt=media"
-                                        class="card-img-icon">
-                                    <span class="card-desc">{{Event.attributes.Salary3}}</span>
-                                </div>
-                            </td>
-                            <td colspan="5" class="td-non-line-card">
-                                <img src="{{Event.attributes.CompanyLogo3}}" class="img-logo-company">
-                            </td>
-                        </tr>
-                    </table>
-                </a>
-            </div>
-            <div class="card-border" style="display: {{Event.attributes.RowStyle4}};">
-                <a href="{{Event.attributes.Link4}}?utm_source=oneprofile_email&utm_medium=job_recommend" target="_blank" style="text-decoration: none !important;">
-                    <table style="width: 100%;">
-                        <tr>
-                            <td colspan="7" class="td-non-line-card">
-                                <p class="card-title">{{Event.attributes.JobTitle4}}</p>
-                                <p class="card-sub-title">{{Event.attributes.JobHeadquarter4}}</p>
-                                <div class="d-flex desc-control">
-                                    <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ftemplate-img-email%403x.png?alt=media"
-                                        class="card-img-icon">
-                                    <span class="card-desc">{{Event.attributes.JobRoleType4}}</span>
-                                </div>
-                                <div class="d-flex desc-control">
-                                    <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ftemplate-img-location%403x.png?alt=media"
-                                        class="card-img-icon">
-                                    <span class="card-desc">{{Event.attributes.JobBranch4}}</span>
-                                </div>
-                                <div class="d-flex desc-control">
-                                    <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ftemplate-img-salary%403x.png?alt=media"
-                                        class="card-img-icon">
-                                    <span class="card-desc">{{Event.attributes.Salary4}}</span>
-                                </div>
-                            </td>
-                            <td colspan="5" class="td-non-line-card">
-                                <img src="{{Event.attributes.CompanyLogo4}}" class="img-logo-company">
-                            </td>
-                        </tr>
-                    </table>
-                </a>
-            </div>
-            <div class="card-border" style="display: {{Event.attributes.RowStyle5}};">
-                <a href="{{Event.attributes.Link5}}?utm_source=oneprofile_email&utm_medium=job_recommend" target="_blank" style="text-decoration: none !important;">
-                    <table style="width: 100%;">
-                        <tr>
-                            <td colspan="7" class="td-non-line-card">
-                                <p class="card-title">{{Event.attributes.JobTitle5}}</p>
-                                <p class="card-sub-title">{{Event.attributes.JobHeadquarter5}}</p>
-                                <div class="d-flex desc-control">
-                                    <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ftemplate-img-email%403x.png?alt=media"
-                                        class="card-img-icon">
-                                    <span class="card-desc">{{Event.attributes.JobRoleType5}}</span>
-                                </div>
-                                <div class="d-flex desc-control">
-                                    <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ftemplate-img-location%403x.png?alt=media"
-                                        class="card-img-icon">
-                                    <span class="card-desc">{{Event.attributes.JobBranch5}}</span>
-                                </div>
-                                <div class="d-flex desc-control">
-                                    <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ftemplate-img-salary%403x.png?alt=media"
-                                        class="card-img-icon">
-                                    <span class="card-desc">{{Event.attributes.Salary5}}</span>
-                                </div>
-                            </td>
-                            <td colspan="5" class="td-non-line-card">
-                                <img src="{{Event.attributes.CompanyLogo5}}" class="img-logo-company">
-                            </td>
-                        </tr>
-                    </table>
-                </a>
-            </div>
-        </div>
-
-
-        <p class="text-footer">ยังไม่พบงานที่ต้องการคุณต้องการ? ลองดูงานทั้งหมดได้เลย</p>
-        <div class="button-control">
-            <a href="https://app.jobhack.co/?utm_source=oneprofile_email&utm_medium=all_jobs_button" class="button-footer">
+            background-color: #3d4e6f;">
                 ดูงานทั้งหมด >
             </a>
         </div>
 
-        <div class="line-footer"></div>
-        <table>
-            <tr>
-                <td class="text-under-footer"><a
-                        href="https://scoutout.co/%e0%b9%80%e0%b8%81%e0%b8%b5%e0%b9%88%e0%b8%a2%e0%b8%a7%e0%b8%81%e0%b8%b1%e0%b8%9a%e0%b9%80%e0%b8%a3%e0%b8%b2/">เกี่ยวกับบริษัท</a>
+        <div style="margin-left: auto;
+        margin-right: auto;
+        width: 544px;
+
+        margin-top: 40px;
+        height: 1px;
+        border: solid 1px #aaaaaa;"></div>
+        <table style=" margin-left: auto;
+        margin-top: 8px;
+       
+        margin-right: auto;">
+            <tr style=" padding-bottom: 32px !important">
+                <td style=" font-size: 10px;
+                color: #aaaaaa; padding: 8px 4px;"><a href="https://scoutout.co/%e0%b9%80%e0%b8%81%e0%b8%b5%e0%b9%88%e0%b8%a2%e0%b8%a7%e0%b8%81%e0%b8%b1%e0%b8%9a%e0%b9%80%e0%b8%a3%e0%b8%b2/">เกี่ยวกับบริษัท</a>
                 </td>
-                <td class="text-under-footer"><a href="mailto:customerservice@scoutout.net">ติดต่อเรา</a></td>
-                <td class="text-under-footer"><a href="https://app.careercraft.co/me/edit">Unsubscribe</a></td>
-                <td class="text-under-footer"><a
-                        href="https://scoutout.co/th/terms-th/">ข้อกำหนดและเงื่อนไขการใช้บริการ</a></td>
-                <td class="text-under-footer"><a href="https://scoutout.co/th/privacy-th/">นโยบายความเป็นส่วนตัว</a>
+                <td style=" font-size: 10px;
+                color: #aaaaaa; padding: 8px 4px;"><a href="mailto:customerservice@scoutout.net">ติดต่อเรา</a></td>
+                <td style=" font-size: 10px;
+                color: #aaaaaa;  padding: 8px 4px;"><a href="https://app.careercraft.co/me/edit">Unsubscribe</a></td>
+                <td style=" font-size: 10px;
+                color: #aaaaaa; padding: 8px 4px;"><a href="https://scoutout.co/th/terms-th/">ข้อกำหนดและเงื่อนไขการใช้บริการ</a></td>
+                <td style=" font-size: 10px;
+                color: #aaaaaa; padding: 8px 4px;"><a href="https://scoutout.co/th/privacy-th/">นโยบายความเป็นส่วนตัว</a>
                 </td>
             </tr>
         </table>
     </div>
     <div style="width: 600px; margin-left: auto; margin-right:auto; margin-top: 40px;">
         <div>
-            <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ffull-logo-scoutout%403x.png?alt=media"
-                style="height: 44px; width: 600px; object-fit: contain; text-align: center; margin-left: auto; margin-right: auto;">
-            <table>
+            <img src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ffull-logo-scoutout%403x.png?alt=media" style="height: 44px; width: 600px; object-fit: contain; text-align: center; margin-left: auto; margin-right: auto;">
+            <table style=" margin-left: auto;
+            margin-top: 8px;
+            margin-right: auto;">
                 <tr>
-                    <td class="td-non-line">
+                    <td style="border-right: none;">
                         <a href="https://www.facebook.com/ScoutOutLimited">
-                            <img class="icon-end"
-                                src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ficon-social-fb%403x.png?alt=media"></a>
+                            <img style="width: 23px;
+                            height: 23px;
+                            object-fit: contain;
+                            margin-left: 2px;
+                            margin-right: 2px;" src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ficon-social-fb%403x.png?alt=media"></a>
                     </td>
-                    <td class="td-non-line">
+                    <td style="border-right: none;">
                         <a href="https://www.instagram.com/scoutout_recruit/?hl=en">
-                            <img class="icon-end"
-                                src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ficon-social-ig%403x.png?alt=media"></a>
+                            <img style="width: 23px;
+                            height: 23px;
+                            object-fit: contain;
+                            margin-left: 2px;
+                            margin-right: 2px;" src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ficon-social-ig%403x.png?alt=media"></a>
                     </td>
-                    <td class="td-non-line">
+                    <td style="border-right: none;">
                         <a href="https://page.line.me/wlq0077m">
-                            <img class="icon-end"
-                                src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ficon-social-line%403x.png?alt=media"></a>
+                            <img style="width: 23px;
+                            height: 23px;
+                            object-fit: contain;
+                            margin-left: 2px;
+                            margin-right: 2px;" src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ficon-social-line%403x.png?alt=media"></a>
                     </td>
-                    <td class="td-non-line">
+                    <td style="border-right: none;">
                         <a href="mailto:customerservice@scoutout.net">
-                            <img class="icon-end"
-                                src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ficon-social-email%403x.png?alt=media"></a>
+                            <img style="width: 23px;
+                            height: 23px;
+                            object-fit: contain;
+                            margin-left: 2px;
+                            margin-right: 2px;" src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ficon-social-email%403x.png?alt=media"></a>
                     </td>
-                    <td class="td-non-line">
+                    <td style="border-right: none;">
                         <a href="https://twitter.com/scoutoutlimited?lang=en">
-                            <img class="icon-end"
-                                src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ficon-social-twitter%403x.png?alt=media"></a>
+                            <img style="width: 23px;
+                            height: 23px;
+                            object-fit: contain;
+                            margin-left: 2px;
+                            margin-right: 2px;" src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ficon-social-twitter%403x.png?alt=media"></a>
                     </td>
-                    <td class="td-non-line">
+                    <td style="border-right: none;">
                         <a href="https://www.youtube.com/channel/UCQ8YAzjTz8H6hDofWUkC4Xg">
-                            <img class="icon-end"
-                                src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ficon-social-youtube%403x.png?alt=media"></a>
+                            <img style="width: 23px;
+                            height: 23px;
+                            object-fit: contain;
+                            margin-left: 2px;
+                            margin-right: 2px;" src="https://firebasestorage.googleapis.com/v0/b/scout-android-test.appspot.com/o/assets%2Ficon-social-youtube%403x.png?alt=media"></a>
                     </td>
                 </tr>
             </table>
         </div>
-        <p class="text-end">ScoutOut is ready-to-use recruitment platform, <br>an efficient hiring solution to get
+        <p style=" text-align: center;
+        font-size: 10px;
+        color: #aaaaaa;">ScoutOut is ready-to-use recruitment platform, <br>an efficient hiring solution to get
             the right people for your business.
             <br><br>
             © ScoutOut Limited 2016 - 2021. All Rights Reserved
         </p>
     </div>
-    </div>
+    
 
 
 </body>
-
 </html>
