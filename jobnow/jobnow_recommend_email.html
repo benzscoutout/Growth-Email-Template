@@ -1,0 +1,550 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="http://fonts.googleapis.com/css?family=Prompt" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        @font-face {
+            font-family: "Prompt";
+            src: url(https://fonts.googleapis.com/css?family=Prompt) format("truetype");
+        }
+
+        body {
+            font-family: "Prompt", Verdana, Tahoma;
+            font-size: 15px;
+        }
+
+        .color-valencia {
+            color: #d45130;
+        }
+
+        .border-card {
+            display: flex;
+            width: 100%;
+            margin-bottom: 8px;
+            height: auto;
+            min-height: 147px;
+            border-radius: 4px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: #b3b3b3;
+            background-color: #ffffff;
+        }
+
+        .image-card-control {
+            position: relative;
+            height: auto;
+            width: 200px;
+min-height: 147px;
+            display: flex;
+        }
+
+        .image-card {
+            position: absolute;
+            height: auto;
+            width: 100%;
+min-height: 147px;
+            object-fit: cover;
+        }
+
+        .logo-control {
+            bottom: 0;
+            margin-left: 4px;
+            margin-bottom: 4px;
+            display: inline-flex;
+            position: absolute;
+        }
+
+        .text-expire {
+            font-size: 13px;
+            font-family: 'Prompt';
+            color: white;
+            font-weight: 400;
+            margin-left: 4px;
+            margin-top: auto;
+            margin-bottom: 16px;
+        }
+
+        .logo-in-image {
+            width: 40px;
+            height: 40px;
+            margin-top: auto;
+            margin-bottom: 4px;
+            margin-left: 4px;
+            border-radius: 50%;
+            border-style: solid;
+            border-color: gray;
+            border-width: 1px;
+        }
+
+        .content-control {
+            padding: 8px;
+            width: 70%;
+            height: auto;
+            display: block;
+            flex-direction: column;
+        }
+
+        .title {
+            font-size: 20px;
+            font-family: 'Prompt';
+            font-weight: 600;
+            color: #333;
+            line-height: 1.5em;
+            overflow: hidden;
+            display: block;
+        }
+
+        .desc {
+            font-size: 14px;
+            font-weight: normal;
+            color: #888888;
+            line-height: 1.5em;
+            overflow: hidden;
+            display: block;
+        }
+
+        .desc-location {
+            font-size: 14px;
+            margin-left: 6px;
+            font-weight: normal;
+            line-height: 1.5em;
+            overflow: hidden;
+            color: #333333;
+            display: block;
+        }
+
+        .desc-salary {
+            font-size: 14px;
+            margin-left: 6px;
+            font-weight: bold;
+            line-height: 1.5em;
+            overflow: hidden;
+            color: #e96d5d;
+            display: block;
+        }
+
+        .icon-desc {
+            width: auto;
+            height: 14px;
+            object-fit: cover;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+
+        .button-all {
+            cursor: pointer;
+            margin-left: auto;
+            margin-right: auto;
+            width: 236px;
+            height: 44px;
+            border-radius: 36px;
+            background-color: #e96d5d;
+            border: none;
+            display: flex;
+        }
+
+        .text-button {
+            font-family: 'Prompt';
+            font-size: 18px;
+            font-weight: 500;
+            color: #fff;
+            margin: auto;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        @media screen and (max-width: 768px) {
+            .border-card {
+                display: inline-flex;
+                width: 100%;
+                margin-bottom: 8px;
+                height: 147px;
+                border-radius: 4px;
+                box-shadow: 0 1px 5px 0 rgba(74, 144, 226, 0.39);
+                background-color: #ffffff;
+            }
+
+            .image-card-control {
+                position: relative;
+                height: 147px;
+                width: 50%;
+                display: flex;
+            }
+
+            .image-card {
+                position: absolute;
+                height: 147px;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            .logo-control {
+                position: absolute;
+
+            }
+
+            .text-expire {
+                font-size: 13px;
+                font-family: 'Prompt';
+                color: white;
+                font-weight: 400;
+                margin-left: 4px;
+
+            }
+
+            .content-control {
+                padding: 8px;
+                width: 70%;
+                height: 147px;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .title {
+                font-size: 17px;
+                font-family: 'Prompt';
+                font-weight: 600;
+                color: #333;
+                line-height: 1.5em;
+                overflow: hidden;
+            }
+
+            .desc {
+                font-size: 12px;
+                font-weight: normal;
+                color: #888888;
+                line-height: 1.5em;
+                overflow: hidden;
+            }
+
+            .desc-location {
+                font-size: 12px;
+                margin-left: 6px;
+                font-weight: normal;
+                color: #333333;
+                line-height: 1.5em;
+                overflow: hidden;
+            }
+
+            .desc-salary {
+                font-size: 12px;
+                margin-left: 6px;
+                font-weight: bold;
+                color: #e96d5d;
+                line-height: 1.5em;
+                overflow: hidden;
+            }
+
+            .icon-desc {
+                width: auto;
+                height: 12px;
+                object-fit: cover;
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+
+            .button-all {
+                cursor: pointer;
+                margin-left: auto;
+                margin-right: auto;
+                width: 236px;
+                height: 44px;
+                border-radius: 36px;
+                background-color: #e96d5d;
+                border: none;
+                display: flex;
+            }
+
+            .text-button {
+                font-family: 'Prompt';
+                font-size: 16px;
+                font-weight: 500;
+                color: #fff;
+                margin: auto;
+            }
+
+            a {
+                text-decoration: none;
+            }
+        }
+    </style>
+    <title>Your Message Subject or Title</title>
+</head>
+
+<body style="font-family: 'Prompt';background-color: #f7e6df;font-size: 15px;">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" id="backgroundTable">
+        <tr>
+            <td>
+                <table align="center" border="0" cellpadding="0" cellspacing="0" style="margin-top:20px;max-width: 600px;">
+                    <tr>
+                        <td>
+                            <img src="https://jobnow.work/wp-content/uploads/2020/05/email-header@3x.png" style="width: 100%;margin-bottom: -6px;" align="absbottom">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #ffffff;" valign="top" width="600">
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tr>
+                                    <td valign="top" width="50"></td>
+                                    <td width="500">
+                                        <table border="0" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td height="30">&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    สวัสดีค่ะ <b style="font-weight: 600;">คุณ {{Attributes.FirstName}} {{Attributes.LastName}} </b>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-top:24px; font-weight: 300;">
+                                                    ขอบคุณที่สนใจฝากประวัติกับน้องนาว
+                                                    วันนี้น้องนาวมีงานที่น่าสนใจมานำเสนอ 
+                                                    หากสนใจ คลิกเข้าไปดูรายละเอียดและกดสมัครด้วยประวัติที่เคยฝากไว้ได้เลยค่ะ
+                                                    <br>
+                                                   <br>
+                                                   <b>อย่าลืมอัพเดทประวัติการศึกษาและการทำงานเป็นข้อมูลล่าสุดด้วยนะคะ </b><br>
+                                                    <br>
+                                                    ขอให้สนุกกับการหางานค่ะ
+                                                </td>
+                                            </tr>
+                                            
+                                            <tr>
+                                                <td width="100" class="border-card" style="margin-top: 24px;display: flex;width: 100%;margin-bottom: 8px;height: auto;min-height: 147px;border-radius: 4px;border-width: 1px;border-style: solid;border-color: #b3b3b3;background-color: #ffffff;">
+                                                    <a href="https://job.jobnow.work/job/{{Event.attributes.Link1}}?utm_source=jobnow_submit_profile_email&utm_medium=job_recommend" style="display: flex;width: 100%;text-decoration: none;">
+                                                        <div class="image-card-control" style="background-image: url({{Event.attributes.CompanyLogo1}});
+                                                        background-repeat: no-repeat;background-position: center;background-size: cover;position: relative;height: auto;width: 200px;min-height: 147px;display: flex;">
+                                                    <img src="{{Event.attributes.CompanyLogo}}" style="margin-top: auto; position: absolute; bottom: 0; border-radius: 25px; width: 50px; height: 50px;">    
+                                                    </div>
+                                                        <div class="content-control" style="padding: 8px;width: 70%;height: auto;display: block;flex-direction: column;">
+                                                            <span class="title" style="font-size: 20px;font-family: 'Prompt';font-weight: 600;color: #333;line-height: 1.5em;overflow: hidden;display: block;">{{Event.attributes.JobTitle1}}</span>
+                                                            <span class="desc" style="font-size: 14px;font-weight: normal;color: #888888;line-height: 1.5em;overflow: hidden;display: block;">{{Event.attributes.JobHeadquarter1}}</span>
+                                                            <span class="desc" style="font-size: 14px;font-weight: normal;color: #888888;line-height: 1.5em;overflow: hidden;display: block;">{{Event.attributes.JobRoleType1}}</span>
+                                                            <div style="display: flex; margin-top: 8px;">
+                                                                <img src="https://jobnow.work/wp-content/uploads/2020/05/location@3x.png" class="icon-desc" style="width: auto;height: 14px;object-fit: cover;margin-top: auto;margin-bottom: auto;">
+                                                                <span class="desc-location" style="font-size: 14px;margin-left: 6px;font-weight: normal;line-height: 1.5em;overflow: hidden;color: #333333;display: block;">{{Event.attributes.JobBranch1}}</span>
+                                                            </div>
+                                                            <div style="display: flex; margin-top: 8px;">
+                                                                <img src="https://jobnow.work/wp-content/uploads/2020/05/salary@3x.png" class="icon-desc" style="width: auto;height: 14px;object-fit: cover;margin-top: auto;margin-bottom: auto;">
+                                                                <span class="desc-salary" style="font-size: 14px;margin-left: 6px;font-weight: bold;line-height: 1.5em;overflow: hidden;color: #e96d5d;display: block;">{{Event.attributes.Salary1}}</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td width="100" class="border-card" style="margin-top: 24px;display: flex;width: 100%;margin-bottom: 8px;height: auto;min-height: 147px;border-radius: 4px;border-width: 1px;border-style: solid;border-color: #b3b3b3;background-color: #ffffff;">
+                                                    <a href="https://job.jobnow.work/job/{{Event.attributes.Link2}}?utm_source=jobnow_submit_profile_email&utm_medium=job_recommend" style="display: flex;width: 100%;text-decoration: none;">
+                                                        <div class="image-card-control" style="background-image: url({{Event.attributes.CompanyLogo2}});
+                                                        background-repeat: no-repeat;background-position: center;background-size: cover;position: relative;height: auto;width: 200px;min-height: 147px;display: flex;">
+                                                            <img src="{{Event.attributes.CompanyLogo}}" style="margin-top: auto; position: absolute; bottom: 0; border-radius: 25px; width: 50px; height: 50px;">
+                                                        </div>
+                                                        <div class="content-control" style="padding: 8px;width: 70%;height: auto;display: block;flex-direction: column;">
+                                                            <span class="title" style="font-size: 20px;font-family: 'Prompt';font-weight: 600;color: #333;line-height: 1.5em;overflow: hidden;display: block;">{{Event.attributes.JobTitle2}}</span>
+                                                            <span class="desc" style="font-size: 14px;font-weight: normal;color: #888888;line-height: 1.5em;overflow: hidden;display: block;">{{Event.attributes.JobHeadquarter2}}</span>
+                                                            <span class="desc" style="font-size: 14px;font-weight: normal;color: #888888;line-height: 1.5em;overflow: hidden;display: block;">{{Event.attributes.JobRoleType2}}</span>
+                                                            <div style="display: flex; margin-top: 8px;">
+                                                                <img src="https://jobnow.work/wp-content/uploads/2020/05/location@3x.png" class="icon-desc" style="width: auto;height: 14px;object-fit: cover;margin-top: auto;margin-bottom: auto;">
+                                                                <span class="desc-location" style="font-size: 14px;margin-left: 6px;font-weight: normal;line-height: 1.5em;overflow: hidden;color: #333333;display: block;">{{Event.attributes.JobBranch2}}</span>
+                                                            </div>
+                                                            <div style="display: flex; margin-top: 8px;">
+                                                                <img src="https://jobnow.work/wp-content/uploads/2020/05/salary@3x.png" class="icon-desc" style="width: auto;height: 14px;object-fit: cover;margin-top: auto;margin-bottom: auto;">
+                                                                <span class="desc-salary" style="font-size: 14px;margin-left: 6px;font-weight: bold;line-height: 1.5em;overflow: hidden;color: #e96d5d;display: block;">{{Event.attributes.Salary2}}</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td width="100" class="border-card" style="margin-top: 24px;display: flex;width: 100%;margin-bottom: 8px;height: auto;min-height: 147px;border-radius: 4px;border-width: 1px;border-style: solid;border-color: #b3b3b3;background-color: #ffffff;">
+                                                    <a href="https://job.jobnow.work/job/{{Event.attributes.Link3}}?utm_source=jobnow_submit_profile_email&utm_medium=job_recommend" style="display: flex;width: 100%;text-decoration: none;">
+                                                        <div class="image-card-control" style="background-image: url({{Event.attributes.CompanyLogo3}});
+                                                        background-repeat: no-repeat;background-position: center;background-size: cover;position: relative;height: auto;width: 200px;min-height: 147px;display: flex;">
+                                                    <img src="{{Event.attributes.CompanyLogo}}" style="margin-top: auto; position: absolute; bottom: 0; border-radius: 25px; width: 50px; height: 50px;">    
+                                                    </div>
+                                                        <div class="content-control" style="padding: 8px;width: 70%;height: auto;display: block;flex-direction: column;">
+                                                            <span class="title" style="font-size: 20px;font-family: 'Prompt';font-weight: 600;color: #333;line-height: 1.5em;overflow: hidden;display: block;">{{Event.attributes.JobTitle3}}</span>
+                                                            <span class="desc" style="font-size: 14px;font-weight: normal;color: #888888;line-height: 1.5em;overflow: hidden;display: block;">{{Event.attributes.JobHeadquarter3}}</span>
+                                                            <span class="desc" style="font-size: 14px;font-weight: normal;color: #888888;line-height: 1.5em;overflow: hidden;display: block;">{{Event.attributes.JobRoleType3}}</span>
+                                                            <div style="display: flex; margin-top: 8px;">
+                                                                <img src="https://jobnow.work/wp-content/uploads/2020/05/location@3x.png" class="icon-desc" style="width: auto;height: 14px;object-fit: cover;margin-top: auto;margin-bottom: auto;">
+                                                                <span class="desc-location" style="font-size: 14px;margin-left: 6px;font-weight: normal;line-height: 1.5em;overflow: hidden;color: #333333;display: block;">{{Event.attributes.JobBranch3}}</span>
+                                                            </div>
+                                                            <div style="display: flex; margin-top: 8px;">
+                                                                <img src="https://jobnow.work/wp-content/uploads/2020/05/salary@3x.png" class="icon-desc" style="width: auto;height: 14px;object-fit: cover;margin-top: auto;margin-bottom: auto;">
+                                                                <span class="desc-salary" style="font-size: 14px;margin-left: 6px;font-weight: bold;line-height: 1.5em;overflow: hidden;color: #e96d5d;display: block;">{{Event.attributes.Salary3}}</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td width="100" class="border-card" style="margin-top: 24px;display: flex;width: 100%;margin-bottom: 8px;height: auto;min-height: 147px;border-radius: 4px;border-width: 1px;border-style: solid;border-color: #b3b3b3;background-color: #ffffff;">
+                                                    <a href="https://job.jobnow.work/job/{{Event.attributes.Link4}}?utm_source=jobnow_submit_profile_email&utm_medium=job_recommend" style="display: flex;width: 100%;text-decoration: none;">
+                                                        <div class="image-card-control" style="background-image: url({{Event.attributes.CompanyLogo4}});
+                                                        background-repeat: no-repeat;background-position: center;background-size: cover;position: relative;height: auto;width: 200px;min-height: 147px;display: flex;">
+                                                      <img src="{{Event.attributes.CompanyLogo}}" style="margin-top: auto; position: absolute; bottom: 0; border-radius: 25px; width: 50px; height: 50px;">    
+                                                      
+                                                    </div>
+                                                        <div class="content-control" style="padding: 8px;width: 70%;height: auto;display: block;flex-direction: column;">
+                                                            <span class="title" style="font-size: 20px;font-family: 'Prompt';font-weight: 600;color: #333;line-height: 1.5em;overflow: hidden;display: block;">{{Event.attributes.JobTitle4}}</span>
+                                                            <span class="desc" style="font-size: 14px;font-weight: normal;color: #888888;line-height: 1.5em;overflow: hidden;display: block;">{{Event.attributes.JobHeadquarter4}}</span>
+                                                            <span class="desc" style="font-size: 14px;font-weight: normal;color: #888888;line-height: 1.5em;overflow: hidden;display: block;">{{Event.attributes.JobRoleType4}}</span>
+                                                            <div style="display: flex; margin-top: 8px;">
+                                                                <img src="https://jobnow.work/wp-content/uploads/2020/05/location@3x.png" class="icon-desc" style="width: auto;height: 14px;object-fit: cover;margin-top: auto;margin-bottom: auto;">
+                                                                <span class="desc-location" style="font-size: 14px;margin-left: 6px;font-weight: normal;line-height: 1.5em;overflow: hidden;color: #333333;display: block;">{{Event.attributes.JobBranch4}}</span>
+                                                            </div>
+                                                            <div style="display: flex; margin-top: 8px;">
+                                                                <img src="https://jobnow.work/wp-content/uploads/2020/05/salary@3x.png" class="icon-desc" style="width: auto;height: 14px;object-fit: cover;margin-top: auto;margin-bottom: auto;">
+                                                                <span class="desc-salary" style="font-size: 14px;margin-left: 6px;font-weight: bold;line-height: 1.5em;overflow: hidden;color: #e96d5d;display: block;">{{Event.attributes.Salary4}}</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <td width="100" class="border-card" style="margin-top: 24px;display: flex;width: 100%;margin-bottom: 8px;height: auto;min-height: 147px;border-radius: 4px;border-width: 1px;border-style: solid;border-color: #b3b3b3;background-color: #ffffff;">
+                                                    <a href="https://job.jobnow.work/job/{{Event.attributes.Link5}}?utm_source=jobnow_submit_profile_email&utm_medium=job_recommend" style="display: flex;width: 100%;text-decoration: none;">
+                                                        <div class="image-card-control" style="background-image: url({{Event.attributes.CompanyLogo5}});
+                                                        background-repeat: no-repeat;background-position: center;background-size: cover;position: relative;height: auto;width: 200px;min-height: 147px;display: flex;">
+                                                    <img src="{{Event.attributes.CompanyLogo}}" style="margin-top: auto; position: absolute; bottom: 0; border-radius: 25px; width: 50px; height: 50px;">    
+                                                    </div>
+                                                        <div class="content-control" style="padding: 8px;width: 70%;height: auto;display: block;flex-direction: column;">
+                                                            <span class="title" style="font-size: 20px;font-family: 'Prompt';font-weight: 600;color: #333;line-height: 1.5em;overflow: hidden;display: block;">{{Event.attributes.JobTitle5}}</span>
+                                                            <span class="desc" style="font-size: 14px;font-weight: normal;color: #888888;line-height: 1.5em;overflow: hidden;display: block;">{{Event.attributes.JobHeadquarter5}}</span>
+                                                            <span class="desc" style="font-size: 14px;font-weight: normal;color: #888888;line-height: 1.5em;overflow: hidden;display: block;">{{Event.attributes.JobRoleType5}}</span>
+                                                            <div style="display: flex; margin-top: 8px;">
+                                                                <img src="https://jobnow.work/wp-content/uploads/2020/05/location@3x.png" class="icon-desc" style="width: auto;height: 14px;object-fit: cover;margin-top: auto;margin-bottom: auto;">
+                                                                <span class="desc-location" style="font-size: 14px;margin-left: 6px;font-weight: normal;line-height: 1.5em;overflow: hidden;color: #333333;display: block;">{{Event.attributes.JobBranch5}}</span>
+                                                            </div>
+                                                            <div style="display: flex; margin-top: 8px;">
+                                                                <img src="https://jobnow.work/wp-content/uploads/2020/05/salary@3x.png" class="icon-desc" style="width: auto;height: 14px;object-fit: cover;margin-top: auto;margin-bottom: auto;">
+                                                                <span class="desc-salary" style="font-size: 14px;margin-left: 6px;font-weight: bold;line-height: 1.5em;overflow: hidden;color: #e96d5d;display: block;">{{Event.attributes.Salary5}}</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </td>
+                                            </tr>
+    
+                                            <tr>
+                                                <td>
+                                                    <div style="display: flex; margin-top: 24px;">
+                                                        <a class="button-all" href="https://job.jobnow.work/jobs?latitude=&longitude=&utm_source=jobnow_submit_profile_email&utm_medium=all_jobs_button" style="text-decoration: none;cursor: pointer;margin-left: auto;margin-right: auto;width: 236px;height: 44px;border-radius: 36px;background-color: #e96d5d;border: none;display: flex;">
+                                                            <span class="text-button" style="font-family: 'Prompt';font-size: 18px;font-weight: 500;color: #fff;margin: auto;">ดูงานทั้งหมด > </span>
+                                                        </a>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="36">&nbsp;</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td valign="top" width="50"></td>
+                                </tr>
+                                <tr style="text-align: center;">
+                                    <td valign="top" width="50"></td>
+                                    <td>
+                                        <a href="https://jobnow.page.link/iMMN" target="_blank" style="text-decoration: none;">
+                                            <img width="100%" alt="Job NOW" src="https://scoutout-data.s3-ap-southeast-1.amazonaws.com/asset/line_oa.png" style="vertical-align:middle;">
+                                        </a>
+                                    </td>
+                                    <td valign="top" width="50"></td>
+                                </tr>
+                                <tr>
+                                    <td height="20">&nbsp;</td>
+                                </tr>
+                                <tr>
+                                    <td valign="top" width="50"></td>
+                                    <td>
+                                        <hr style="border: solid 1px #aaaaaa;">
+                                        <table cellpadding="0" cellspacing="0" border="0">
+                                            <tr>
+                                                <td height="10">&nbsp;</td>
+                                            </tr>
+                                            <tr style="font-size: 11px; text-align: center;">
+                                                <td colspan="3" style="font-size: 10px;">
+                                                    <a href="https://scoutout.net" style="color: #888888;text-decoration: none;">
+                                                        เกี่ยวกับบริษัท
+                                                    </a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                                                    <a href="mailto:jobnow@scoutout.net" style="color: #888888;text-decoration: none;">
+                                                        ติดต่อเรา
+                                                    </a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                                                    <a href="https://scoutout.net/en/terms/" style="color: #888888;text-decoration: none;">
+                                                        ข้อกำหนดและเงื่อนไข
+                                                    </a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                                                    <a href="https://scoutout.net/en/privacy/" style="color: #888888;text-decoration: none;">
+                                                        นโยบายความเป็นส่วนตัว
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="20">&nbsp;</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td valign="top" width="50"></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr style="background-color: #f7e6df; text-align: center;">
+                        <td height="100">
+                            <a href="https://jobnow.work" style="text-decoration: none;"><img alt="Job NOW" src="https://content-cdn.scoutout.co/static/email/logo_2@2x.png" style="vertical-align:middle; height: 45px; width: auto;"></a>
+                        </td>
+                    </tr>
+                    <tr style="background-color: #f7e6df; text-align: center;">
+                        <td height="20">
+                            <a href="https://www.facebook.com/ScoutOutLimited/">
+              <img alt="facebook" height="23px" src="https://content-cdn.scoutout.co/static/email/fb.png" style="vertical-align:middle;" width="23px"></a>
+            <a href="https://www.instagram.com/scoutout_recruit/">
+              <img alt="instagram" height="23px" src="https://content-cdn.scoutout.co/static/email/ig.png" style="vertical-align:middle;" width="23px"></a>
+            <a href="https://line.me/R/ti/p/%40wlq0077m">
+              <img alt="line" height="23px" src="https://content-cdn.scoutout.co/static/email/line.png" style="vertical-align:middle;" width="23px"></a>
+            <a href="mailto:support@scoutout.net">
+              <img alt="email" height="23px" src="https://content-cdn.scoutout.co/static/email/email.png" style="vertical-align:middle;" width="23px"></a>
+            <a href="https://scoutout.co">
+              <img alt="web" height="23px" src="https://content-cdn.scoutout.co/static/email/icon-web.png" style="vertical-align:middle;" width="23px"></a>
+            <a href="https://www.youtube.com/channel/UCQ8YAzjTz8H6hDofWUkC4Xg">
+              <img alt="youtube" height="23px" src="https://content-cdn.scoutout.co/static/email/youtube.png" style="vertical-align:middle;" width="23px"></a>
+            <a href="https://twitter.com/ScoutOutLimited">
+              <img alt="twitter" height="23px" src="https://content-cdn.scoutout.co/static/email/twitter.png" style="vertical-align:middle;" width="23px"></a>
+            <a href="tel:+6620382639">
+              <img alt="phone" height="23px" src="https://content-cdn.scoutout.co/static/email/phone.png" style="vertical-align:middle;" width="23px"></a>
+                        </td>
+                    </tr>
+                    <tr style="background-color: #f7e6df;">
+                        <td height="10"></td>
+                    </tr>
+        </table></td></tr>
+        <tr style="background-color: #f7e6df;">
+            <td style="font-size: 12px !important; text-align:center;" width="500">
+                <span style="font-size: 12px; color: #979696; ">
+                    ScoutOut is ready-to-use recruitment platform, an efficient hiring solution to get the right people for your
+          business.<br><br>
+          © ScoutOut Limited 2016 - 2021. All Rights Reserved.
+                </span>
+            </td>
+        </tr>
+        <tr style="background-color: #f7e6df;">
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+    </table>
+    
+    
+    
+</body>
+
+</html>

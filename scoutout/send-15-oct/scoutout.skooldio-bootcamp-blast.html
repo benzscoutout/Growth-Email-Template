@@ -1,0 +1,479 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link href="http://fonts.googleapis.com/css?family=Prompt" rel="stylesheet" type="text/css">
+    <style type="text/css">
+        @font-face {
+            font-family: "Prompt";
+            src: url(https://fonts.googleapis.com/css?family=Prompt) format("truetype");
+        }
+
+        body {
+            font-family: "Prompt", Verdana, Tahoma;
+            font-size: 15px;
+        }
+
+        .color-valencia {
+            color: #d45130;
+        }
+
+        .border-card {
+            display: flex;
+            width: 100%;
+            margin-bottom: 8px;
+            height: auto;
+            min-height: 147px;
+            border-radius: 4px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: #b3b3b3;
+            background-color: #ffffff;
+        }
+
+        .image-card-control {
+            position: relative;
+            height: auto;
+            width: 200px;
+            min-height: 147px;
+            display: flex;
+        }
+
+        .image-card {
+            position: absolute;
+            height: auto;
+            width: 100%;
+            min-height: 147px;
+            object-fit: cover;
+        }
+
+        .logo-control {
+            bottom: 0;
+            margin-left: 4px;
+            margin-bottom: 4px;
+            display: inline-flex;
+            position: absolute;
+        }
+
+        .text-expire {
+            font-size: 13px;
+            font-family: 'Prompt';
+            color: white;
+            font-weight: 400;
+            margin-left: 4px;
+            margin-top: auto;
+            margin-bottom: 16px;
+        }
+
+        .logo-in-image {
+            width: 40px;
+            height: 40px;
+            margin-top: auto;
+            margin-bottom: 4px;
+            margin-left: 4px;
+            border-radius: 50%;
+            border-style: solid;
+            border-color: gray;
+            border-width: 1px;
+        }
+
+        .content-control {
+            padding: 8px;
+            width: 70%;
+            height: auto;
+            display: block;
+            flex-direction: column;
+        }
+
+        .title {
+            font-size: 20px;
+            font-family: 'Prompt';
+            font-weight: 600;
+            color: #333;
+            line-height: 1.5em;
+            overflow: hidden;
+            display: block;
+        }
+
+        .desc {
+            font-size: 14px;
+            font-weight: normal;
+            color: #888888;
+            line-height: 1.5em;
+            overflow: hidden;
+            display: block;
+        }
+
+        .desc-location {
+            font-size: 14px;
+            margin-left: 6px;
+            font-weight: normal;
+            line-height: 1.5em;
+            overflow: hidden;
+            color: #333333;
+            display: block;
+        }
+
+        .desc-salary {
+            font-size: 14px;
+            margin-left: 6px;
+            font-weight: bold;
+            line-height: 1.5em;
+            overflow: hidden;
+            color: #e96d5d;
+            display: block;
+        }
+
+        .icon-desc {
+            width: auto;
+            height: 14px;
+            object-fit: cover;
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+
+        .button-all {
+            cursor: pointer;
+            margin-left: auto;
+            margin-right: auto;
+            width: 236px;
+            height: 44px;
+            border-radius: 36px;
+            background-color: #e96d5d;
+            border: none;
+            display: flex;
+        }
+
+        .text-button {
+            font-family: 'Prompt';
+            font-size: 18px;
+            font-weight: 500;
+            color: #fff;
+            margin: auto;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        @media screen and (max-width: 768px) {
+            .border-card {
+                display: inline-flex;
+                width: 100%;
+                margin-bottom: 8px;
+                height: 147px;
+                border-radius: 4px;
+                box-shadow: 0 1px 5px 0 rgba(74, 144, 226, 0.39);
+                background-color: #ffffff;
+            }
+
+            .image-card-control {
+                position: relative;
+                height: 147px;
+                width: 50%;
+                display: flex;
+            }
+
+            .image-card {
+                position: absolute;
+                height: 147px;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            .logo-control {
+                position: absolute;
+
+            }
+
+            .text-expire {
+                font-size: 13px;
+                font-family: 'Prompt';
+                color: white;
+                font-weight: 400;
+                margin-left: 4px;
+
+            }
+
+            .content-control {
+                padding: 8px;
+                width: 70%;
+                height: 147px;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .title {
+                font-size: 17px;
+                font-family: 'Prompt';
+                font-weight: 600;
+                color: #333;
+                line-height: 1.5em;
+                overflow: hidden;
+            }
+
+            .desc {
+                font-size: 12px;
+                font-weight: normal;
+                color: #888888;
+                line-height: 1.5em;
+                overflow: hidden;
+            }
+
+            .desc-location {
+                font-size: 12px;
+                margin-left: 6px;
+                font-weight: normal;
+                color: #333333;
+                line-height: 1.5em;
+                overflow: hidden;
+            }
+
+            .desc-salary {
+                font-size: 12px;
+                margin-left: 6px;
+                font-weight: bold;
+                color: #e96d5d;
+                line-height: 1.5em;
+                overflow: hidden;
+            }
+
+            .icon-desc {
+                width: auto;
+                height: 12px;
+                object-fit: cover;
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+
+            .button-all {
+                cursor: pointer;
+                margin-left: auto;
+                margin-right: auto;
+                width: 236px;
+                height: 44px;
+                border-radius: 36px;
+                background-color: #e96d5d;
+                border: none;
+                display: flex;
+            }
+
+            .text-button {
+                font-family: 'Prompt';
+                font-size: 16px;
+                font-weight: 500;
+                color: #fff;
+                margin: auto;
+            }
+
+            a {
+                text-decoration: none;
+            }
+        }
+    </style>
+    <title>Your Message Subject or Title</title>
+</head>
+
+<body style="font-family: 'Prompt';background-color: #f7e6df;font-size: 15px;">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" id="backgroundTable">
+        <tr>
+            <td>
+                <table align="center" border="0" cellpadding="0" cellspacing="0"
+                    style="margin-top:20px;max-width: 600px;">
+                    <tr>
+                        <td>
+                            <img src="https://scoutout.co/wp-content/uploads/2021/10/skooldio-bc-email-temp-header-2.png"
+                                style="width: 100%;margin-bottom: -6px;" align="absbottom">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color: #ffffff;" valign="top" width="600">
+                            <table border="0" cellpadding="0" cellspacing="0"
+                                style="min-height: 300px; padding-bottom: 40px;">
+                                <tr>
+                                    <td valign="top" width="50"></td>
+                                    <td width="500">
+                                        <table border="0" cellpadding="0" cellspacing="0">
+                                            <tr>
+                                                <td height="30">&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: center;">
+                                                    <b
+                                                        style="font-size: 22px; color: black; text-align: center;">เพราะการเรียนรู้ไม่มีวันสิ้นสุด!</b>
+                                                    <br>
+                                                    <span style="font-size: 13px;">ScoutOut
+                                                        เล็งเห็นถึงความสำคัญในการพัฒนาทักษะความสามารถด้านอาชีพ
+                                                        พร้อมสนับสนุนทุนการศึกษา<br>
+                                                        หลักสูตร UX/UI Boothcamp กับ Skooldio เพื่อใช้ในการต่อยอดความรู้
+                                                        ผลักดันศักยภาพก้าวสู่โลกของการทำงานในยุค Digital</span>
+                                                        <br>
+                                                        <br>
+
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: center;">
+                                                    <b
+                                                        style="font-size: 22px; color: black; text-align: center;">ลงทะเบียนเข้าร่วมโครงการได้ฟรี!</b>
+                                                    <br>
+                                                    <span style="font-size: 13px;">ScoutOut จะทำการคัดกรองคุณสมบัติ <br>
+                                                        ผู้ที่ผ่านการคัดกรองและได้รับการยืนยันจะมีสิทธิ์ได้รับทุนการศึกษาจากโครงการ
+                                                        <br>
+                                                        โดยจะได้รับเงินค่าเรียนคืน 100%!
+                                                        เมื่อเริ่มงานกับองค์กรชั้นนำ<br>
+                                                        ที่ได้รับการแนะนำผ่านบริการ Learn Bridge Headhunting Services
+                                                        จากทาง ScoutOut เท่านั้น*<br>
+                                                    </span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: center;">
+                                                    <br>
+                                                    <span>เจ้าหน้าที่จะตรวจสอบและแจ้งผลการคัดกรองเพื่อรับสิทธิ์ ภายใน 7
+                                                        วัน
+                                                    </span>
+                                                    <br>
+                                                    <br>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: center;">
+                                                    <b style="font-size: 20px; color: black; text-align: center;">แสดงศักยภาพที่คุณมี
+                                                        เพื่อคว้าโอกาสได้งานที่ใช่<br>
+                                                        ไม่ต้องรอช้า อย่าคิดเยอะ มาลงทะเบียนกันเลย!
+                                                    </b>
+                                                    <br>
+
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="padding-top:40px; font-weight: 300; text-align: center;">
+                                                    <a href="https://forms.gle/5vjBY7CgSHJq1eH77"
+                                                        style="background-color: red; color: white !important; 
+                                                    font-weight: bold; font-size: 18px; padding: 12px 60px; border-radius: 8px;
+                                                    margin-bottom: 30px; margin-top: 30px;"
+                                                        target="_blank">ลงทะเบียน</a>
+                                                        <br>
+                                                        <br>
+                                                        <br>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: left;">
+                                                    <b style="font-size: 13px; color: black; text-align: left;">หรืออ่านรายละเอียดเพิ่มเติมได้ที่
+                                                        <br>
+                                                        <a href="https://scoutout.co/skooldio-bootcamp-campaign"
+                                                            target="_blank">https://scoutout.co/skooldio-bootcamp-campaign</a>
+                                                    </b>
+                                                    <br>
+                                                    <br>
+                                                    <span style="font-size:13px;">*เงื่อนไขเป็นไปตามที่บริษัทกำหนด</span>
+
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td
+                                                    style="padding-top:24px; padding-top: 8px; 
+                                                    font-size: 11px !important; font-weight: 300; text-align: left; color: #888888;">
+                                                    คุณสมบัติและเงื่อนไข 
+                                                    <ol>
+                                                        <li>สงวนสิทธิ์ในการรับทุนการศึกษาสำหรับผู้ที่สมัคร  UX/UI Bootcamp#2 กับทาง Skooldio เท่านั้น 
+                                                            (หากท่านยังไม่ได้สมัครเข้าร่วม Bootcamp สามารถเข้าไปดูรายละเอียดและกดสมัครได้ตามลิ้งค์ที่แนบไปทางอีเมลตอบรับหลังจากลงทะเบียนเพื่อรับทุนการศึกษาเรียบร้อยแล้ว)
+                                                            </li>
+                                                            <li>ผู้สมัครจะต้องกรอกข้อมูลให้ถูกต้องและครบถ้วน ทั้งการลงทะเบียนร่วมโครงการและการสมัคร Bootcamp กับทาง Skooldio เพื่อยืนยันตัวตนในการรับสิทธิ์</li>
+                                                            <li>ทีมงานจะทำการตรวจสอบคุณสมบัติของท่าน และท่านจะได้รับการติดต่อกลับจากเจ้าหน้าที่ผ่านทางอีเมล เพื่อยืนยันการได้รับสิทธิ์ ภายใน 7 วัน</li>
+                                                            <li>เฉพาะผู้ลงทะเบียนที่ผ่านการคัดกรองและได้รับการยืนยันสิทธิ์จาก ScoutOut แล้วเท่านั้นที่มีสิทธิ์ได้รับทุนการศึกษาจากโครงการนี้</li>
+                                                            <li>ท่านจะได้รับเงินค่าเรียนคืนเมื่อเริ่มงานกับองค์กรชั้นนำที่ทาง ScoutOut แนะนำให้ผ่านบริการ Learn Bridge Headhunting Services ภายในวันที่ 30 มิถุนายน 2565 เท่านั้น (ในกรณีที่ผู้สมัครไม่ผ่านช่วงทดลองงาน หรือลาออกในช่วง 120 วันแรกหลังเริ่มงาน ทาง scoutout ขอสงวนสิทธิ์ในการพิจารณาเรียกคืนทุนการศึกษา)
+                                                            </li>
+                                                            <li>สามารถลงทะเบียนได้ตั้งแต่วันนี้ - 19 ตุลาคม 64</li>
+                                                            <li>บริษัทขอสงวนสิทธิ์ในการเปลี่ยนแปลงเงื่อนไขต่างๆ โดยไม่ต้องแจ้งให้ทราบล่วงหน้า</li>
+                                                    </ol>
+                                                </td>
+                                            </tr>
+
+
+                                        </table>
+                                    </td>
+                                    <td valign="top" width="50"></td>
+                                </tr>
+
+
+
+                            </table>
+                        </td>
+                    </tr>
+                    <tr style="background-color: #f7e6df; text-align: center;">
+                        <td height="100">
+                            <a href="https://jobnow.work" style="text-decoration: none;"><img alt="SCOUTOUT"
+                                    src="https://scoutout.co/wp-content/uploads/2019/08/cropped-logo_with_red_text.png"
+                                    style="vertical-align:middle; height: 45px; width: auto;"></a>
+                        </td>
+                    </tr>
+                    <tr style="background-color: #f7e6df; text-align: center;">
+                        <td height="20">
+                            <a href="https://www.facebook.com/ScoutOutLimited/">
+                                <img alt="facebook" height="23px"
+                                    src="https://content-cdn.scoutout.co/static/email/fb.png"
+                                    style="vertical-align:middle;" width="23px"></a>
+                            <a href="https://www.instagram.com/scoutout_recruit/">
+                                <img alt="instagram" height="23px"
+                                    src="https://content-cdn.scoutout.co/static/email/ig.png"
+                                    style="vertical-align:middle;" width="23px"></a>
+                            <a href="https://line.me/R/ti/p/%40wlq0077m">
+                                <img alt="line" height="23px"
+                                    src="https://content-cdn.scoutout.co/static/email/line.png"
+                                    style="vertical-align:middle;" width="23px"></a>
+                            <a href="mailto:support@scoutout.net">
+                                <img alt="email" height="23px"
+                                    src="https://content-cdn.scoutout.co/static/email/email.png"
+                                    style="vertical-align:middle;" width="23px"></a>
+                            <a href="https://scoutout.co">
+                                <img alt="web" height="23px"
+                                    src="https://content-cdn.scoutout.co/static/email/icon-web.png"
+                                    style="vertical-align:middle;" width="23px"></a>
+                            <a href="https://www.youtube.com/channel/UCQ8YAzjTz8H6hDofWUkC4Xg">
+                                <img alt="youtube" height="23px"
+                                    src="https://content-cdn.scoutout.co/static/email/youtube.png"
+                                    style="vertical-align:middle;" width="23px"></a>
+                            <a href="https://twitter.com/ScoutOutLimited">
+                                <img alt="twitter" height="23px"
+                                    src="https://content-cdn.scoutout.co/static/email/twitter.png"
+                                    style="vertical-align:middle;" width="23px"></a>
+                            <a href="tel:+6620382639">
+                                <img alt="phone" height="23px"
+                                    src="https://content-cdn.scoutout.co/static/email/phone.png"
+                                    style="vertical-align:middle;" width="23px"></a>
+                        </td>
+                    </tr>
+                    <tr style="background-color: #f7e6df;">
+                        <td height="10"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr style="background-color: #f7e6df;">
+            <td style="font-size: 12px !important; text-align:center;" width="500">
+                <span style="font-size: 12px; color: #979696; ">
+                    ScoutOut is ready-to-use recruitment platform, an efficient hiring solution to get the right people
+                    for your
+                    business.<br><br>
+                    © ScoutOut Limited 2016 - 2021. All Rights Reserved.
+                </span>
+            </td>
+        </tr>
+        <tr style="background-color: #f7e6df;">
+            <td>
+                &nbsp;
+            </td>
+        </tr>
+    </table>
+
+
+
+</body>
+
+</html>
